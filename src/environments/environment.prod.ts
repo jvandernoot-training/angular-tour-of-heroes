@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  heroesBaseUrl: 'http://localhost:5010'
 };
