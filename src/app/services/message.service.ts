@@ -10,7 +10,8 @@ export class MessageService {
   constructor() { }
 
   add(message: string) {
-    this.messages.push(message);
+    let length = this.messages.length;
+    this.messages.push(length + ": " + message);
   }
 
   clear() {

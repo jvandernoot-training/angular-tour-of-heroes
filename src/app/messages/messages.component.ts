@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WindowServiceService } from '../services/window-service.service';
 import { MessageService } from './../services/message.service';
 
 @Component({
@@ -8,9 +9,16 @@ import { MessageService } from './../services/message.service';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor(public messageService: MessageService) { }
+  constructor(public messageService: MessageService, public windowService: WindowServiceService) { }
 
   ngOnInit(): void {
   }
 
+  postMessage() {
+    this.windowService.post();
+  }
+
+  clearMessages() {
+    this.messageService.clear();
+  }
 }
