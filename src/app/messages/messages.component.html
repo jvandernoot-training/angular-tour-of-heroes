@@ -1,7 +1,8 @@
 <!-- <div *ngIf="messageService.messages.length"> -->
 <div>
     <h2>Messages</h2>
-    <button class="clear" (click)="postMessage()">Broadcast</button>
+    <button class="clear" (click)="broadcastMessageViaWindowService()">Broadcast via WindowService</button>
+    <button class="clear" (click)="broadcastMessageViaBroadcastChannel()">Broadcast via BroadcastChannel</button>
     <button class="clear" (click)="messageService.clear()">Clear Messages</button>
     <div *ngFor='let message of messageService.messages'> {{message}} </div>
 </div>
